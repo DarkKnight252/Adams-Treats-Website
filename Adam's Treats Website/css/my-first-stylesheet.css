@@ -1,0 +1,284 @@
+/* Natural-themed container with bushcraft vibes */
+body {
+    box-shadow: 0 0 0 100vmax #874c0c;
+    border: 10px solid black;
+    border-radius: 19px;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1024px;
+    min-width: 256px;
+    padding: 16px;
+    box-sizing: border-box;
+    background-image: url('images/IndexBackground.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Bushcraft-style title */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #3E2C20;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation menu */
+nav {
+    background-color: #8B5A2B;
+    border: 10px solid black;
+    border-radius: 20px;
+    padding: 16px;
+    max-width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    position: relative;
+}
+
+/* Hamburger toggle */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    background-color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+/* Nav links styling */
+.nav-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-links ul li {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    white-space: nowrap;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links ul li a:hover {
+    background-color: #654321;
+    padding: 12px 17px;
+}
+
+.nav-links ul li:not(:last-child)::after {
+    content: "|";
+    color: black;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+nav ul li a:focus {
+    outline: 2px solid #FCAB68;
+}
+
+/* Responsive: Mobile Menu */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links ul li {
+        padding: 10px 0;
+    }
+}
+
+/* Bushcraft-style headings and text */
+h2 {
+    color: #3E2C20;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 18px;
+    color: #2C2C2C;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Image style */
+img {
+    border: 5px solid black;
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.button {
+    background-color: #4A752C;
+    color: white;
+    padding: 12px 24px;
+    border: 3px solid black;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #365E1D;
+    padding: 14px 26px;
+    border: 4px solid black;
+}
+
+/* Tables */
+table {
+    font-size: 70%;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #FCAB68;
+}
+
+td {
+    background-color: #BA99C0;
+}
+
+/* Accessibility */
+nav li a:focus {
+    outline: 2px solid #FCAB68;
+}
+
+/* Additional styling features */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.lazy-load {
+    content-visibility: auto;
+}
+
+.parallax {
+    background-image: url('background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Back to top button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+}
+
+/* Skeleton Loader */
+.skeleton {
+    background: linear-gradient(90deg, #ddd 25%, #eee 50%, #ddd 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 5px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #ffffff;
+    }
+
+    nav {
+        background-color: #4A3C29;
+    }
+
+    nav ul li a {
+        color: white;
+    }
+
+    .button {
+        background-color: #365E1D;
+        color: white;
+    }
+
+    .button:hover {
+        background-color: #4A752C;
+    }
+}
+
